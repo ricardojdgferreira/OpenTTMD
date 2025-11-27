@@ -25,12 +25,12 @@ Outputs:
 - titration_timeline.png (IFPcs and RMSD evolution over time)
 	
 Version 1.0.1
-  >> instead of N reps, it sequentially performs MD runs within the specified temperature ramp (300k-450k, dT=10K)
-  >> uses fingerprint scoring (IFPcs) instead of ContactScore
-  >> outputs "titration_profile.png" and "titration_timeline.png" instead of "results.csv"
+- instead of N reps, it sequentially performs MD runs within the specified temperature ramp (300k-450k, dT=10K)
+- uses fingerprint scoring (IFPcs) instead of ContactScore
+- outputs "titration_profile.png" and "titration_timeline.png" instead of "results.csv"
 
 ### Background 
-OpenBPMD is an open source implementation of thermal titration molecular dynamics (TTMD). It was heavily inspired by the OpenBPMD scripting with OpenMM while based scientifically in the TTMD package:
+OpenTTMD is an open source implementation of thermal titration molecular dynamics (TTMD). It was heavily inspired by the OpenBPMD scripting with OpenMM while based scientifically in the TTMD package:
 - OpenBPMD: https://github.com/dlukauskis/OpenBPMD
 - TTMD: https://github.com/molecularmodelingsection/TTMD
 
