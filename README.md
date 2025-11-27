@@ -9,7 +9,7 @@ Runs sequential MD with increasing temperatures (default, 300 to 450) and scores
 Scoring function (interaction fingerprint from ODDT)
 
 $$
-IFP_{cs} = \frac{(A \cdot B)}{\lVert A \rVert \lVert B \rVert} \times (- 1)
+IFP_{cs} = \frac{A \cdot B}{\lVert A \rVert \lVert B \rVert} \times (- 1)
 $$
 
 MS coefficient (slope of the straight line that interpolates the first and last points of the “titration profile”):
