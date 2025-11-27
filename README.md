@@ -23,9 +23,10 @@ The lower the MS is (between 0 and 1), the stronger is the binding
 Outputs:
 - titration_profile.png (with MS value)
 - titration_timeline.png (IFPcs and RMSD evolution over time)
-	
+
+
 Version 1.0.1
-- instead of N reps, it sequentially performs MD runs within the specified temperature ramp (300k-450k, dT=10K)
+- instead of N reps, it sequentially performs MD runs within the specified temperature ramp (300-450K, $\Delta$T=10 K)
 - uses fingerprint scoring (IFPcs) instead of ContactScore
 - outputs "titration_profile.png" and "titration_timeline.png" instead of "results.csv"
 
