@@ -26,7 +26,7 @@ Outputs:
 
 
 Version 1.0.1
-- instead of N reps, it sequentially performs MD runs within the specified temperature ramp (300-450K, $\Delta T$ = 10 K)
+- instead of N reps, it sequentially performs MD runs within the specified temperature ramp (300-450K, $\Delta T$   = 10 K)
 - uses fingerprint scoring (IFPcs) instead of ContactScore
 - outputs "titration_profile.png" and "titration_timeline.png" instead of "results.csv"
 
