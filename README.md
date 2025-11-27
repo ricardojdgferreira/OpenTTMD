@@ -9,13 +9,13 @@ Runs sequential MD with increasing temperatures (default, 300 to 450) and scores
 Scoring function (interaction fingerprint from ODDT)
 
 $$
-IFPcs = \frac{(A·B} {||A||||B||)} `x -1
+IFPcs = \frac{(A·B} {∥A∥ ∥B∥} `x -1
 $$
 
 MS coefficient (slope of the straight line that interpolates the first and last points of the “titration profile”):
 
 $$
-MS = \frac{(meanIFPcs(T_end) - (-1))} {(T_end - T_start)}
+MS = \frac{meanIFPcs(T_{end}) - (-1)} {(T_{end} - T_{start})}
 $$
 
 The lower the MS is (between 0 and 1), the stronger is the binding
