@@ -1,22 +1,27 @@
 #!/usr/bin/env python
 descriptn = \
     """
-    OpenBPMD - an open source implementation of Binding Pose Metadynamics
-    (BPMD) with OpenMM. Replicates the protocol as described by
-    Clark et al. 2016 (DOI: 10.1021/acs.jctc.6b00201).
+    OpenTTMD - an open source implementation of Thermal Titration
+    Molecular Dynamics (TTMD) with OpenMM. Replicates the protocol as described by
+    Pavan et al. 2022 (DOI: 10.1021/acs.jcim.2c00995).
 
-    Runs ten 10 ns metadynamics simulations that biases the RMSD of the ligand.
+    Runs sequential MD with increasing temperatures (default, 300 to 450) and scores
+	the ability of the ligand to maintain its native interactions with the target.
 
-    The stability of the ligand is calculated using the ligand RMSD (PoseScore)
-    and the persistence of the original noncovalent interactions between the
-    protein and the ligand (ContactScore). Stable poses have a low RMSD and
-    a high fraction of the native contacts preserved until the end of the
-    simulation.
+	Scoring function (interaction fingerprint from ODDT)
+	IFPcs = (A·B / ||A||||B||) * -1
 
-    A composite score is calculated using the following formula:
-    CompScore = PoseScore - 5 * ContactScore
-    
-    Version 1.0.4
+	MS coefficient (slope of the straight line that interpolates the 
+	                first and last points of the “titration profile”):
+	MS = (meanIFPcs(T_end) - (-1)) / (T_end - T_start)
+
+    The lower the MS is (between 0 and 1), the stronger is the binding
+	
+    Outputs:
+	  - titration_profile.png (with MS value)
+	  - titration_timeline.png (IFPcs and RMSD evolution over time)
+	
+    Version 1.0.1
       >> instead of N reps, it sequentially performs MD runs within
          the specified temperature ramp (300k-450k, dT=10K)
       >> uses fingerprint scoring (IFPcs) instead of ContactScore
