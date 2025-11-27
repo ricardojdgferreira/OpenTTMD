@@ -7,10 +7,14 @@ Pavan et al. 2022 (DOI: 10.1021/acs.jcim.2c00995).
 Runs sequential MD with increasing temperatures (default, 300 to 450) and scores the ability of the ligand to maintain its native interactions with the target.
 
 Scoring function (interaction fingerprint from ODDT)
-$IFPcs = \frac{(A·B} {||A||||B||)} x -1$
+$$
+IFPcs = \frac{(A·B} {||A||||B||)} `x -1
+$$
 
 MS coefficient (slope of the straight line that interpolates the first and last points of the “titration profile”):
-$MS = \frac{(meanIFPcs(T_end) - (-1))} {(T_end - T_start)}$
+$$
+MS = \frac{(meanIFPcs(T_end) - (-1))} {(T_end - T_start)}
+$$
 
 The lower the MS is (between 0 and 1), the stronger is the binding
 	
