@@ -14,8 +14,9 @@ $$
 
 MS coefficient (slope of the straight line that interpolates the first and last points of the “titration profile”):
 
-\usepackage{mathtools}
-MS = \frac{\text{mean } \prescript{T_{\text{end}}}{}{IFP_{cs}} - (-1)}{T_{\text{end}} - T_{\text{start}}}
+$$
+MS = \frac{\text{mean } IFP_{cs}^{\,T_{\text{end}}} - (-1)}{T_{\text{end}} - T_{\text{start}}}
+$$
 
 The lower the MS is (between 0 and 1), the stronger is the binding
 	
